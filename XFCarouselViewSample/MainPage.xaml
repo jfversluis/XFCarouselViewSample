@@ -7,7 +7,11 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="CarouselView Sample" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <CarouselView ItemsSource="{Binding Monkeys}">
+
+        <!-- This is for the IndicatorView video  -->
+        <IndicatorView x:Name="monkeysIndicator" IndicatorColor="LightGray" SelectedIndicatorColor="Gray" IndicatorsShape="Square" Margin="0,50,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+        <CarouselView ItemsSource="{Binding Monkeys}" IndicatorView="{x:Reference monkeysIndicator}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
